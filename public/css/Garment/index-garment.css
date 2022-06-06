@@ -1,0 +1,163 @@
+body {
+    background-size: cover;
+    position:relative;
+    padding-bottom: 200px;
+    min-height: 100vh;
+}
+
+nav {
+    margin-top: 5%;
+    float:left;
+    margin-left:13%;
+}
+ 
+nav ul{
+    display:flex;
+}
+
+
+nav li {
+    list-style: none;
+    background-color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 5%;
+    width: 150px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+
+nav li a{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    text-shadow: 0 0 10px #000;
+}
+
+.intermedio {
+    margin-left:2%;
+    margin-right: 6%;
+    color: white;
+    text-shadow: 0 0 10px #fff;
+    font-weight: 900;
+}
+
+#agrupar{
+    float:left;
+    background-color: white;
+    margin-left:15%;
+    width:70%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+
+#cabecerasection{
+    width:90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 2px solid #D1D1D1;
+    float:left;
+    margin-bottom: 2%;
+}
+
+h1{ 
+    width:30%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+    float:left;
+    font-weight: 200;
+    margin-bottom: -0.2%;
+    margin-top: 3%;
+}
+
+#botonAgregar{
+    width:10%;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+    padding:1%;
+    float:right;
+    margin-top: 2.1%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    -webkit-transition: text-shadow 0.5s linear;
+    transition: text-shadow 0.5s linear;
+}
+
+#botonAgregar:hover{
+    text-shadow: 0 0 10px #fff;
+}
+
+#titulomensaje{
+    margin-left: 5%;
+    width:90%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    background-color: lightgreen;
+    float:left;
+}
+
+#tablaPrendas{
+    margin-left: 5%;
+    width:90%;
+    margin-bottom: 5%;
+
+}
+
+th{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+td{
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+#botoneditar{
+    float:left;
+    background-color: lightgreen;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color:black;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border:none;
+    margin:1%;
+    border-radius: 5px;
+    margin-left: 30%;
+}
+
+#botonborrar{
+    float:left;
+    background-color: lightcoral;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color:black;
+    padding: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border:none;
+    font-size: 100%;
+    margin:1%;
+    border-radius: 5px;
+}
+
+
+#paginado{
+    margin-top: -10%;
+}

@@ -1,0 +1,53 @@
+footer{
+    float:left;
+    width:100%;
+    background: #121212; 
+    position:absolue;
+    bottom:0;
+    left:0;
+}
+
+
+#apartadologo{
+    float:left;
+    width:100%;
+}
+
+#spiritlogo{
+    font-size: 300%;
+    color:white;
+    font-family: 'Times New Roman';
+    text-shadow: 0 0 10px #fff;
+    float:left;
+    width:100%;
+    text-align: center;
+
+}
+
+footer img{
+    width:3%;
+    margin-left: 3%;
+}
+
+#primerafooter{
+    margin-left: 42.5%;
+}
+
+#spiritslogan{
+    font-size: 100%;
+    color:white;
+    font-family: 'Times New Roman';
+    text-shadow: 0 0 10px #fff;
+    float:left;
+    width:100%;
+    text-align: center;
+    margin-top: -2%;
+}
+
+#copy{
+    float:left;
+    width: 100%;
+    color:white;
+    text-align: center;
+    font-size: 65%;
+}

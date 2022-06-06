@@ -1,0 +1,80 @@
+header{
+    float:left;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: #121212;
+}
+
+#logospirit{
+    font-size: 300%;
+    color:white;
+    font-family: 'Times New Roman';
+    text-shadow: 0 0 10px #fff;
+    float:left;
+    width:10%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 5%;
+}
+
+header a{
+    color:white;
+    float:left;
+    font-family: 'Times New Roman';
+    font-size: 130%;
+    text-decoration: none;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 0.25%;
+    padding-bottom: 0.25%;
+    margin-top: 1%;
+    -webkit-transition: text-shadow 0.5s linear;
+    transition: text-shadow 0.5s linear;
+    text-align: center;
+}
+
+header a:hover{
+    text-shadow: 0 0 10px #fff;
+}
+
+.enlaceheader {
+    border-right: 1px solid #fff;
+}
+
+#userheaderadmin{
+    width:20%;
+    float:right;
+    margin-right: 2%;
+}
+
+.iconoheader {
+    width:14%;
+    border-radius: 50%;
+    border:2px solid #fff;
+    float:left;
+    margin-top: 1.6%;
+}
+
+#nameheader {
+    float:left;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 180%;
+    margin-left: 4%;
+    margin-top: 5.5%;
+}
+
+#enlaceexit{
+    float:left;
+    width:10%;
+    /*border:1px solid yellow;*/
+}
+
+#iconoexit{
+    float:left;
+    width:80%;
+    border-radius: 50%;
+    
+}

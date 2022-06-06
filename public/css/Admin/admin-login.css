@@ -1,0 +1,110 @@
+body {
+    margin:0;
+    padding:0; 
+    background-image: url(../../photos/IMAGEN_ADMIN_FONDO.jpg); 
+    background-size: cover;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+#loginadmin {
+   width:25%;
+   margin-left: 37.5%;
+   margin-top:4%;
+   border-radius:5px;
+   background-color: rgba(0, 0, 0, 0.6);
+}
+
+#titleadmin{
+    width:100%;
+    text-align: center;
+    color:white;
+    padding-top: 13%;
+    text-shadow: 0 0 10px #fff;
+    font-size: 400%;
+    font-family: 'Times New Roman';
+}
+
+#titlewelcomeadmin{
+    width:100%;
+    text-align: center;
+    margin-top: -10%;
+    color:white;
+    padding-bottom: 8%;
+    text-shadow: 0 0 10px #fff;
+    font-size: 150%;
+    font-family: 'Times New Roman';
+}
+
+
+#icononombrelogin{
+    width:10%;
+    float:left;
+    background-color: black;
+    border-start-start-radius:5px;
+    border-end-start-radius:5px;
+    height: 40px;
+    margin-left: 15%;
+}
+
+
+#userlogin{
+    width:60%;
+    border-start-end-radius:5px;
+    border-end-end-radius:5px;
+    height: 40px;
+    border:1px solid black;
+    margin-bottom: 4%;
+    float:left;
+    margin-right: 15%;
+    font-family: 'Times New Roman';
+}
+
+#iconopasswordlogin{
+    width:10%;
+    float:left;
+    background-color: black;
+    border-start-start-radius:5px;
+    border-end-start-radius:5px;
+    height: 40px;
+    margin-top: 3%;
+    margin-left: 15%;
+}
+
+#passlogin{
+    width:60%;
+    border-start-end-radius:5px;
+    border-end-end-radius:5px;
+    height: 40px;
+    border:1px solid black;
+    margin-bottom: 4%;
+    float:left;
+    margin-top: 3%;
+    margin-right: 15%;
+    font-family: 'Times New Roman';
+}
+
+#botonlogin{
+    border:3px solid black;
+    margin-top: 8%;
+    margin-left:38%;
+    margin-bottom: 10%;
+    padding:1%;
+    background-color: black;
+    color:white;
+    font-family: 'Times New Roman';
+    border-style: none;
+    font-size: x-large;
+    border-radius: 5px;
+    padding-left: 6%;
+    padding-right: 6%;
+    -webkit-transition: text-shadow 0.5s linear;
+    transition: text-shadow 0.5s linear;
+    border:3px solid white;
+}
+
+#botonlogin:hover{
+    text-shadow: 0 0 10px #fff;
+}

@@ -1,0 +1,85 @@
+body {
+    background-image: url(../../photos/IMAGEN_ADMIN_FONDO.jpg); 
+    background-size: cover;
+ }
+ 
+ nav {
+    margin-top: 5%;
+    float:left;
+    margin-left:13%;
+ }
+ 
+ nav li {
+    list-style: none;
+    background-color: white;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+ }
+ 
+ nav li a{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+ }
+ 
+ #agrupar{
+    float:left;
+    background-color: white;
+    margin-left:15%;
+    width:70%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+ }
+ 
+ h2{
+    margin-left: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 200%;
+ }
+ 
+ #agrupar_prendas{
+    width:25%;
+    float:left;
+    margin-left: 5%;
+    background-color: #121212;
+    border-radius: 10px;
+ }
+ 
+ h4{
+    float:left;
+    width:100%;
+    text-align: center;
+    color:white;
+    text-shadow: 0 0 10px #fff;
+    font-size: 150%;
+ }
+ 
+ .img_usuario{
+    width:70%;
+    float:left;
+    margin-left:15%;
+    margin-bottom: 10%;
+    border-radius:10px;
+    border:2px solid white;
+ 
+ }
+ 
+ #agrupar_categorias{
+    width:25%;
+    float:left;
+    margin-left: 7.5%;
+    background-color: #121212;
+    border-radius: 10px;
+ }
+ 
+ #agrupar_pedidos{
+    width:25%;
+    float:left;
+    margin-left: 7.5%;
+    background-color: #121212;
+    border-radius: 10px;
+    margin-bottom: 2.5%;
+ }

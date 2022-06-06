@@ -1,0 +1,56 @@
+header{
+    float:left;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: #121212;
+    z-index:200;
+}
+
+#logospirit{
+    font-size: 300%;
+    color:white;
+    font-family: 'Times New Roman';
+    text-shadow: 0 0 10px #fff;
+    float:left;
+    width:10%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-left: 5%;
+}
+
+#userheaderadmin{
+    width:20%;
+    float:right;
+}
+
+.iconoheader {
+    width:12%;
+    border-radius: 50%;
+    border:2px solid #fff;
+    float:left;
+    margin-top: 3.6%;
+}
+
+#nameheader {
+    float:left;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 180%;
+    margin-left: 8%;
+    margin-top: 6%;
+}
+
+#enlaceexit{
+    float:left;
+    width:10%;
+}
+
+#iconoexit{
+    float:left;
+    width:80%;
+    border-radius: 50%;
+    margin-left: 25%; 
+    margin-top: 10%;
+}

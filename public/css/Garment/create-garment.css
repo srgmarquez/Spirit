@@ -1,0 +1,161 @@
+body {
+    background-size: cover;
+    min-height: 100vh;
+}
+
+nav {
+    margin-top: 5%;
+    float:left;
+    margin-left:13%;
+}
+ 
+nav ul{
+    display:flex;
+}
+
+nav li {
+    list-style: none;
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-right: 5%;
+    width: 200px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav li a{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+.intermedio {
+    margin-left: -4%;
+    color: white;
+    -webkit-transition: text-shadow 1s linear;
+    transition: text-shadow 1s linear;
+    font-weight: 900;
+}
+
+nav li a:hover{
+    text-shadow: 0 0 10px #000;
+}
+
+#agrupar{
+    float:left;
+    background-color: white;
+    margin-left:15%;
+    width:70%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+h1{
+    margin-left: 5%;
+    width:90%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 200%;
+    margin-top: 4%;
+    border-bottom: 2px solid #D1D1D1;
+}
+
+#tituloerrores{
+    background-color: lightcoral;
+    margin-left: 5%;
+    width:90%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+}
+
+#errores{
+    color:red;
+    margin-left: 5%;
+}
+
+#formulario_crear{
+    width:40%;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 10%;
+    float:left;
+    margin-bottom: 5%;
+}
+
+label{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 110%;
+    font-weight: 100;
+}
+
+.apartar_label{
+    float:left;
+    width:20%;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.apartado{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.campo{
+    font-family: 'Times New Roman', Times, serif;
+    width:60%;
+}
+
+#campo_imagen{
+    border:1px solid white;
+    padding-left: 1%;
+    margin-left: 22%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom:10%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#imagen{
+    width:40%;
+    float:left;
+    margin-bottom: 5%;
+}
+
+#img_prendas{
+    float:left;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.botonformulario{
+    border:3px solid black;
+    margin-top: 8%;
+    margin-left:38%;
+    margin-bottom: 5%;
+    padding:1%;
+    background-color: black;
+    color:white;
+    font-family: 'Times New Roman';
+    border-style: none;
+    font-size: large;
+    border-radius: 5px;
+    padding-left: 6%;
+    padding-right: 6%;
+    -webkit-transition: text-shadow 0.5s linear;
+    transition: text-shadow 0.5s linear;
+}
+
+.botonformulario:hover{
+    text-shadow: 0 0 10px #fff;
+}
