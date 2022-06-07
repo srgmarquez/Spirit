@@ -16,7 +16,7 @@
     <div id="agrupar">
         <div id="cabecerasection">
             <h1>Listado Prendas</h1>
-            <a id="botonAgregar" href="{{url('garment/create')}}">Nueva categoría</a>
+            <a id="botonAgregar" href="{{url('garment/create')}}">Nueva prenda</a>
         </div>
         @if (Session::has('mensaje'))
             <p id="titulomensaje">{{Session::get('mensaje')}}</p>

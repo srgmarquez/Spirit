@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GarmentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::resource('category', CategoryController::class);
 Route::resource('garment', GarmentController::class);
 Route::resource('admin', AdminController::class);
 Route::resource('/', HomeController::class);
-
+Route::resource('user', UserController::class);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

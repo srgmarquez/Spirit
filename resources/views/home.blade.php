@@ -21,7 +21,7 @@
                     <h4 id="slogan">Dress for Success</h4>
                     <h1 id="bienvenidatitulo">BIENVENID@ {{ Auth::user()->name }} </h1>
                     <p id="textocomenzar">Empezar a comprar</p>
-                    <a id="enlaceempezar" href="#">Empezar</a>
+                    <a id="enlaceempezar" href="{{ url('/user') }}">Empezar</a>
                 </div>
             </div>
         </div>

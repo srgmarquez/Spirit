@@ -120,11 +120,13 @@ th{
     border-radius: 5px;
     color:white;
     font-family: 'Times New Roman', Times, serif;
+    width:33%;
 }
 
 td{
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.6);
+    width:33%;
 }
 
 #botoneditar{
