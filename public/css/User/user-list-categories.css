@@ -72,6 +72,19 @@ h1{
     float:left;  
 }
 
+#titulomensaje{
+    margin-left: 5%;
+    width:90%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    background-color: lightgreen;
+    float:left;
+    margin-bottom: -2%;
+} 
+
 #descripcion{
     padding-left: 10%;
     padding-right: 10%;

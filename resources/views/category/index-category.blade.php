@@ -39,7 +39,6 @@
                         <a id="botoneditar" href="{{ url('/category/' . $category->id . '/edit') }}">Editar</a>  
                         <form action="{{url('/category/' . $category->id)}}" method="post">
                             @csrf
-
                             {{method_field('DELETE')}}
                             <input type="submit" id="botonborrar" value="Borrar">
                         </form>

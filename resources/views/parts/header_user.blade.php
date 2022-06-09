@@ -5,6 +5,16 @@
     </div>
     <div id="userheaderadmin">
         <div id="imagenheader">
+            <a class="dropdown-item" id="enlacecarrito" href="#" 
+                onclick="event.preventDefault();
+                document.getElementById('carrito-form').submit();">
+                <img class="iconoheader" src="{{ asset('photos/ICONO-CARRITO.png') }}"/>
+                <form id="carrito-form" action="{{ url('shoping') }}" method="GET" class="d-none"> 
+                    @csrf
+                </form>
+            </a>
+        </div>
+        <div id="imagenheader">
             <img class="iconoheader" src="{{ asset('photos/USUARIO.png') }}"/>
         </div>
         <div id="nameheader">

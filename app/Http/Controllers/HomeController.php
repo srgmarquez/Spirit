@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        session_start();
+        $prendas = []; 
+        $_SESSION['prendas'] = $prendas;
         return view('home');
     }
 }

@@ -151,6 +151,6 @@ class CategoryController extends Controller
 
     public function garments()
     {
-        return $this->hasMany(Garment::class, 'id');
+        return $this->hasMany(Garment::class);
     }
 }

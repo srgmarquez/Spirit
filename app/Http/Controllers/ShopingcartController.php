@@ -1,14 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
-use Illuminate\Http\Request;
-use App\Models\Category;
 use App\Models\Garment;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-
-class UserController extends Controller
+class ShopingcartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +15,9 @@ class UserController extends Controller
     public function index()
     {
         session_start();
-        $dates['categories'] = Category::paginate();
-        return view('user.user-list-categories', $dates); 
+        $prendas = $_SESSION['prendas'];
+        print_r($prendas);
+        return view('shopingcart.index-shoping', compact('prendas'));
     }
 
     /**
@@ -38,9 +36,9 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($id)
+    public function store()
     {
-        session_start();
+        //
     }
 
     /**
@@ -51,20 +49,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        session_start();
-        $category = Category::findOrFail($id);
-        $garments['garments'] = DB::table('categories')
-                         ->join('garments', 'garments.category_id', '=', 'categories.id')
-                         ->where('categories.id', $category->id)
-                         ->paginate(5);
-        
-        return view('user.user-show-garments', compact('category'), $garments);
-
-
-        /*if (Category::findOrFail($id)) {
-            $garments = Garment::where('category_id', 'LIKE', $id)->get();
-        }
-        return view('user.user-show-garments', 'garments', compact('category'));*/
+        //
     }
 
     /**
@@ -85,9 +70,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        session_start();
+        $prendas = $_SESSION['prendas'];
+        $garment = Garment::findOrFail($id);
+        array_push($prendas, $garment);
+        $_SESSION['prendas'] = $prendas;
+        return redirect('user')->with('mensaje', 'Prenda ' . $garment->garment_name . ' añadida al carrito');    
     }
 
     /**
