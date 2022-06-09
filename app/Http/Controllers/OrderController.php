@@ -23,7 +23,8 @@ class OrderController extends Controller
      */
     public function create()
     {
-        echo "hola";
+        session_start();
+        return view('order.order-create');
     }
 
     /**
