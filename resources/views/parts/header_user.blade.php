@@ -8,14 +8,19 @@
             <a class="dropdown-item" id="enlacecarrito" href="#" 
                 onclick="event.preventDefault();
                 document.getElementById('carrito-form').submit();">
-                <img class="iconoheader" src="{{ asset('photos/ICONO-CARRITO.png') }}"/>
+                @php 
+                    $prendas = $_SESSION['prendas'];
+                    $numero_prendas = count($prendas);
+                @endphp
+                @if ($numero_prendas >= 1 )
+                    <img class="iconoheader" style="border:3px solid red" src="{{ asset('photos/ICONO-CARRITO.png') }}"/>
+                @else
+                    <img class="iconoheader" src="{{ asset('photos/ICONO-CARRITO.png') }}"/>
+                @endif
                 <form id="carrito-form" action="{{ url('shoping') }}" method="GET" class="d-none"> 
                     @csrf
                 </form>
             </a>
-        </div>
-        <div id="imagenheader">
-            <img class="iconoheader" src="{{ asset('photos/USUARIO.png') }}"/>
         </div>
         <div id="nameheader">
             {{ Auth::user()->name }}

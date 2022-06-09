@@ -16,7 +16,6 @@ class ShopingcartController extends Controller
     {
         session_start();
         $prendas = $_SESSION['prendas'];
-        print_r($prendas);
         return view('shopingcart.index-shoping', compact('prendas'));
     }
 
@@ -88,6 +87,16 @@ class ShopingcartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        session_start();
+        $garment = Garment::findOrFail($id);
+        $prendas = $_SESSION['prendas'];
+        foreach($prendas as $prenda){
+            if($prenda->id == $garment->id) {
+                $prendas = array_diff($prendas, array($prenda));
+            }
+        }
+        $_SESSION['prendas'] = $prendas;
+        $prendas = $_SESSION['prendas'];
+        return view('shopingcart.index-shoping', compact('prendas'));
     }
 }

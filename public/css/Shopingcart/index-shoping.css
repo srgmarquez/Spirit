@@ -1,0 +1,142 @@
+body {
+    margin:0;
+    padding:0;   
+    background-color:#3b3b32;
+}
+
+body *{
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+
+#agrupar{
+    float:left;
+    background-color: white;
+    margin-left:15%;
+    width:70%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-top: 6%;
+}
+
+h1{
+    margin-left: 5%;
+    margin-top: 3%;
+    width:90%;
+    float:left;
+    border-bottom: 2px solid grey;
+}
+
+#agruparprendatitulo{
+    float:left;
+    width:20%;
+    border:1px solid grey;
+    height:170px;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    background-color: #000;
+    border-start-start-radius: 5px;
+    border-end-start-radius: 5px;
+    color:white;
+    text-shadow: 0 0 10px #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+}
+
+#agruparprendaresto{
+    float:left;
+    width:70%;
+    height:170px;
+    margin-bottom: 5%;
+
+}
+
+#image{
+    width:30%;
+    float:left;
+    height: 170px;
+    background-size: cover;
+
+
+}
+
+#datos{
+    width:70%;
+    float:left;
+    border:1px solid gray;
+    border-start-end-radius: 5px;
+    border-end-end-radius: 5px;
+    height:170px;
+}
+
+#talla{
+    float:left;
+    width:30%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+}
+
+#precio{
+    float:left;
+    width:30%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 150%;
+}
+
+#apartadoboton{
+    float:left;
+    width:40%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 130%;
+}
+
+#enlace{
+    background-color: #000;
+    color:white;
+    padding:5%;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 100%;
+}
+
+#enlace:hover{
+    text-shadow: 0 0 10px #fff;
+}
+
+#preciofinal{
+    float:left;
+    width:80%;
+    text-align: right;
+    font-size: 120%;
+    margin-bottom: 5%;
+}
+
+.negrita{
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#botoncomprar{
+    background:#000;
+    width:10%;
+    padding:2%;
+    margin-left: 2%;
+    float:left;
+    color:white;
+    border-radius: 5px;
+    text-shadow: 0 0 10px #fff;
+    text-align: center;
+    font-size: 140%;
+    text-decoration: none;
+}
