@@ -7,20 +7,21 @@
 </head>
 <body>
     <div id="loginadmin">
-        <form id="formulariologinadmin">
+        <form id="formulariologinadmin" method="post" action="{{ url('/admin') }}">
+        @csrf
             <p id="titleadmin">Spirit</p>
             <p id="titlewelcomeadmin">¡Bienvenid@ administrador!</p>
             <div id="camponombrelogin">
                 <div id="icononombrelogin">
                 </div>
-                <input type="text" id="userlogin" name="adminUserName" placeholder="usuario">
+                <input type="email" id="userlogin" name="adminUserGmail" placeholder="email">
             </div>
             <div id="campopasswordlogin">
                 <div id="iconopasswordlogin">
                 </div>
                 <input type="password" id="passlogin" name="adminUserPassword" placeholder="contraseña">
             </div>
-            <input type="button" value="Entrar"  id="botonlogin" onclick=""/>
+            <button id="botonlogin" type="submit">Entrar</button>
         </form>
     </div>
 </body>

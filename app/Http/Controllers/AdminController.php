@@ -17,4 +17,16 @@ class AdminController extends Controller
     {
         return view('admin.admin-login');
     }
+
+    public function store(Request $request)
+    {
+        $gmail = $_POST['adminUserGmail'];
+        $contraseña = $_POST['adminUserPassword'];
+        if ($gmail == "sergio@gmail.com" && $contraseña == "sergii02") {
+            $mensaje = "Administrador loggeado correctamente";
+            return view('admin.admin-index');
+        } else {
+            return redirect('admin.admin-login')->with('mensaje','Datos del administrador introducidos incorrectos.');
+        }
+    }
 }
