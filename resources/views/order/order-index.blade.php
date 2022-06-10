@@ -25,6 +25,27 @@
                     <th>Fecha pedido</th>
                 </tr>
             </thead>
+            <tbody>
+                @php
+                    $contador = 0;
+                @endphp
+                @foreach($orders as $order)
+                <tr>
+                    @php
+                        $user_name = DB::select('SELECT name FROM users WHERE id = ?', [$order->user_id]);
+                        foreach ($user_name as $value) {
+                            $array[] = $value->name;
+                        }
+                        $name = $array[$contador];
+                        $contador++;
+                    @endphp
+                    <td>{{ $name }}</td>
+                    <td>{{ $order->total_price }}</td>
+                    <td>{{ $order->garments }}</td>
+                    <td>{{ $order->date }}</td>
+                </tr>
+                @endforeach
+            </tbody>
         </table>
     </div>
 </body>

@@ -32,6 +32,9 @@
                     </tr>
             </thead>
             <tbody>
+                @php
+                    $contador = 0;
+                @endphp
                 @foreach($garments as $garment)
                 <tr>
                     <td>{{ $garment->garment_name }}</td>
@@ -41,7 +44,8 @@
                         foreach ($category_name as $value) {
                             $array[] = $value->category_name;
                         }
-                        $name = $array[0];
+                        $name = $array[$contador];
+                        $contador++;
                     @endphp
                     <td>{{ $name}}</td>
                     <td>{{ $garment->price }}</td> 
