@@ -9,6 +9,50 @@ body *{
     font-family: 'Times New Roman';
 }
 
+nav {
+    margin-top: 5%;
+    float:left;
+    margin-left:13%;
+}
+ 
+nav li {
+    list-style: none;
+    background-color: white;
+    padding-top: 11%;
+    padding-bottom: 11%;
+    margin-right: 5%;
+    width: 120%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    font-weight: 200;
+}
+
+nav li a{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-weight: 200;
+}
+
+nav li a:hover{
+    text-shadow: 0 0 10px #000;
+}
+
+#titulomensaje{
+    margin-left: 5%;
+    width:90%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    background-color: lightcoral;
+    float:left;
+    margin-bottom: -2%;
+} 
+
 #agrupar{
     float:left;
     background-color: white;
@@ -16,7 +60,7 @@ body *{
     width:70%;
     border-radius: 10px;
     margin-bottom: 5%;
-    margin-top: 6%;
+ 
 }
 
 h1{

@@ -16,7 +16,8 @@ class ShopingcartController extends Controller
     {
         session_start();
         $prendas = $_SESSION['prendas'];
-        return view('shopingcart.index-shoping', compact('prendas'));
+        $mensaje = "";
+        return view('shopingcart.index-shoping', compact('prendas', 'mensaje'));
     }
 
     /**
@@ -97,6 +98,7 @@ class ShopingcartController extends Controller
         }
         $_SESSION['prendas'] = $prendas;
         $prendas = $_SESSION['prendas'];
-        return view('shopingcart.index-shoping', compact('prendas'));
+        $mensaje = "";
+        return view('shopingcart.index-shoping', compact('prendas', 'mensaje'));
     }
 }

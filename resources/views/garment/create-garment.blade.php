@@ -7,9 +7,9 @@
 <body style="background-image: url('{{ asset('photos/IMAGEN_ADMIN_FONDO.jpg')}}');">
     <nav>   
         <ul>
-            <li><a href="#">Home Admin</a></li>
+            <li><a href="{{url('index-admin')}}">Home Admin</a></li>
             <p class="intermedio">></p>
-            <li><a href="#">Listado prendas</a></li>
+            <li><a href="{{url('garment')}}">Listado prendas</a></li>
             <p class="intermedio">></p>
             <li><a href="#">Nueva prenda</a></li>
         </ul>

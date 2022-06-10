@@ -27,8 +27,14 @@ class OrderController extends Controller
     public function create()
     {
         session_start();
-        $mensaje = "no";
-        return view('order.order-create', compact('mensaje'));
+        if (!isset($_SESSION['nombre_prendas'])){
+            $mensaje = "no-prenda";
+            $prendas = $_SESSION['prendas'];
+            return view('shopingcart.index-shoping', compact('prendas', 'mensaje'));
+        } else {
+            $mensaje = "no";
+            return view('order.order-create', compact('mensaje'));
+        }
     }
 
     /**

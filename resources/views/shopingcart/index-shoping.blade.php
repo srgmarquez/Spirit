@@ -6,9 +6,17 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Shopingcart/index-shoping.css') }}"/>  
 </head>
 <body>
+    <nav>   
+        <ul>
+            <li><a href="{{url('user')}}">Volver al listado de categorías</a></li>
+        </ul>
+    </nav>
     <div id="agrupar">
         @if (Session::has('mensaje'))
             <p id="titulomensaje">{{Session::get('mensaje')}}</p>
+        @endif
+        @if ($mensaje == "no-prenda")
+            <p id="titulomensaje">No hay prendas que comprar</p>
         @endif
         @php
             $precio = 0;

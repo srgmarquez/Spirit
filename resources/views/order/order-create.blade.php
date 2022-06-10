@@ -6,6 +6,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Order/create-order.css') }}"/>  
 </head>
 <body>
+    <nav>   
+        <ul>
+            <li><a href="{{url('shoping')}}">Volver al listado del carrito</a></li>
+        </ul>
+    </nav>
     <div id="agrupar">
         <div id="cabecera">
             <h1>Introducción de datos bancarios</h1>

@@ -19,6 +19,9 @@ use App\Http\Controllers\OrderController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('index-admin', function () {
+    return view('admin/admin-index');
+});
 Route::resource('order', OrderController::class);
 Route::resource('shoping', ShopingcartController::class);
 Route::delete('category/{id}',[CategoryController::class, 'destroy'])->name('categories.destroy');
@@ -32,9 +35,7 @@ Route::resource('user', UserController::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::get('/holla', function () {
-    return view('admin/admin-index');
-});
+
 
 
 Auth::routes();
