@@ -77,3 +77,4 @@
         </form>
     </div>
 </body>
+@extends('parts.footer')

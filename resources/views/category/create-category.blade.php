@@ -53,3 +53,4 @@
         </div>
     </section>
 </body>
+@extends('parts.footer')

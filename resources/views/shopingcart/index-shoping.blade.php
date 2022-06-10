@@ -59,5 +59,6 @@
         <a id="botoncomprar" href="{{url('order/create')}}">Comprar</a>
     </div>
 </body>
+@extends('parts.footer')
 
 

@@ -65,3 +65,4 @@
       
     </div>
 </body>
+@extends('parts.footer')

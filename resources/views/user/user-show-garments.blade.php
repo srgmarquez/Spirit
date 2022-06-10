@@ -34,5 +34,6 @@
         @endforeach
     </section>
 </body>
+@extends('parts.footer')
 
 

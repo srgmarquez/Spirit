@@ -22,22 +22,12 @@ use App\Http\Controllers\OrderController;
 Route::get('index-admin', function () {
     return view('admin/admin-index');
 });
-Route::resource('order', OrderController::class);
-Route::resource('shoping', ShopingcartController::class);
-Route::delete('category/{id}',[CategoryController::class, 'destroy'])->name('categories.destroy');
-Route::resource('category', CategoryController::class);
-Route::resource('garment', GarmentController::class);
+Route::resource('order', OrderController::class)->middleware('auth');
+Route::resource('shoping', ShopingcartController::class)->middleware('auth');
+Route::resource('category', CategoryController::class)->middleware('auth');
+Route::resource('garment', GarmentController::class)->middleware('auth');
 Route::resource('admin', AdminController::class);
 Route::resource('/', HomeController::class);
-Route::resource('user', UserController::class);
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
-
-
+Route::resource('user', UserController::class)->middleware('auth');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

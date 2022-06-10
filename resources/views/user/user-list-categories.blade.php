@@ -25,3 +25,4 @@
         @endforeach
     </div>
 </body>
+@extends('parts.footer')

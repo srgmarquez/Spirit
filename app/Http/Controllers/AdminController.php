@@ -13,6 +13,12 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth')->only('store');
+    }
+
     public function index()
     {
         return view('admin.admin-login');
