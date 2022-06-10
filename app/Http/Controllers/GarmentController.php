@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Models\Garment;
 use App\Models\Category;
 use Illuminate\Http\Request;

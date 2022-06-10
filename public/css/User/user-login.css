@@ -133,11 +133,17 @@ body *{
     text-shadow: 0 0 10px #fff;
 }
 
+.icono{
+    width:50%;
+    margin-top: 6%;
+    margin-left: 20%;
+}
+
 
 #icononombrelogin{
     width:20%;
     float:left;
-    background-color: black;
+    background-color: white;
     border-start-start-radius:5px;
     border-end-start-radius:5px;
     height: 40px;
@@ -149,7 +155,7 @@ body *{
     border-start-end-radius:5px;
     border-end-end-radius:5px;
     height: 40px;
-    border:1px solid black;
+    border:1px solid white;
     margin-bottom: 4%;
     float:left;
     font-family: 'Times New Roman';
@@ -159,7 +165,7 @@ body *{
 #iconopasswordlogin{
     width:20%;
     float:left;
-    background-color: black;
+    background-color: white;
     border-start-start-radius:5px;
     border-end-start-radius:5px;
     height: 40px;
@@ -171,7 +177,7 @@ body *{
     border-start-end-radius:5px;
     border-end-end-radius:5px;
     height: 40px;
-    border:1px solid black;
+    border:1px solid white;
     margin-bottom: 4%;
     float:left;
     margin-top: 3%;
@@ -203,7 +209,7 @@ figcaption {
     margin-top: 20%;
     margin-bottom: 10%;
     padding:3%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);  
     color:white;
     font-family: 'Times New Roman';
     border-style: none;
@@ -213,6 +219,7 @@ figcaption {
     padding-right: 6%;
     -webkit-transition: text-shadow 1s linear;
     transition: text-shadow 1s linear;
+    font-weight: 200;
 }
 
 #botonlogin:hover{

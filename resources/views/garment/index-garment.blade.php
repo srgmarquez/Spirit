@@ -36,8 +36,15 @@
                 <tr>
                     <td>{{ $garment->garment_name }}</td>
                     <td>{{ $garment->description }}</td>
-                    <td>{{ $garment->category_id}}</td>
-                    <td>{{ $garment->price }}</td>
+                    @php
+                        $category_name = DB::select('SELECT category_name FROM categories WHERE id = ?', [$garment->category_id]);
+                        foreach ($category_name as $value) {
+                            $array[] = $value->category_name;
+                        }
+                        $name = $array[0];
+                    @endphp
+                    <td>{{ $name}}</td>
+                    <td>{{ $garment->price }}</td> 
                     <td> 
                         <a id="botoneditar" href="{{ url('/garment/' . $garment->id . '/edit') }}">Editar</a>  
                         <form action="{{url('/garment/' . $garment->id)}}" method="post">

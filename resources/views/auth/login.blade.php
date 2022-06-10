@@ -27,6 +27,7 @@
             </div>
             <div id="camponombrelogin">
                 <div id="icononombrelogin">
+                    <img class="icono" src="{{ asset('photos/ICONO-EMAIL.png') }}">
                 </div>
                 <input id="email" placeholder="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 @error('email')
@@ -37,6 +38,7 @@
             </div>
             <div id="campopasswordlogin">
                 <div id="iconopasswordlogin">
+                    <img class="icono" src="{{ asset('photos/ICONO-LLAVE.png') }}">
                 </div>
                 <input id="password" placeholder="contraseña" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                 @error('password')
