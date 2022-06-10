@@ -14,7 +14,14 @@
             $precio = 0;
         @endphp
         <h1>PRENDAS ELEGIDAS PARA COMPRAR</h1>
+        @php
+            $array_prendas = array();
+        @endphp
         @foreach($prendas as $prenda)
+            @php
+                array_push($array_prendas, $prenda->garment_name);
+                $_SESSION['nombre_prendas'] = $array_prendas;
+            @endphp
             <div id="agruparprendatitulo">{{$prenda->garment_name}}</div>
             <div id="agruparprendaresto">
                 <div id="image" style="background-image: url('{{asset('storage').'/'.$prenda->picture_file}}')">
@@ -37,6 +44,9 @@
         @endforeach
         <div id="preciofinal">
             El precio final de la compra es: <span class="negrita"> {{$precio}}€ </span>
+            @php
+                $_SESSION['precio_total'] = $precio;
+            @endphp
         </div>
         <a id="botoncomprar" href="{{url('order/create')}}">Comprar</a>
     </div>

@@ -25,6 +25,8 @@ h1{
     width:90%;
     float:left;
     border-bottom: 2px solid grey;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
 }
 
 #agruparcategoria{

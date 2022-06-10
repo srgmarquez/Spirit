@@ -26,7 +26,7 @@ class AdminController extends Controller
             $mensaje = "Administrador loggeado correctamente";
             return view('admin.admin-index');
         } else {
-            return redirect('admin.admin-login')->with('mensaje','Datos del administrador introducidos incorrectos.');
-        }
+            return view('admin.admin-login')->with('mensaje','Datos del administrador introducidos incorrectos.');
+        }        
     }
 }

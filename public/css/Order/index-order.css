@@ -73,4 +73,28 @@ h1{
     font-weight: 200;
     margin-bottom: -0.2%;
     margin-top: 3%;
+    font-weight: 200;
+}
+
+#tablaPedidos{
+    margin-left: 5%;
+    width:90%;
+    margin-bottom: 5%;
+
+}
+
+th{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+    width:20%;
+}
+
+td{
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    width:20%;
 }

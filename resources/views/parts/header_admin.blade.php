@@ -15,7 +15,11 @@
     <form id="garments-form" action="{{  url('garment') }}" method="GET" class="d-none">
         @csrf
     </form>
-    <a href="#">Pedidos</a>
+    <a href="{{ url('order') }}"  onclick="event.preventDefault();
+                document.getElementById('orders-form').submit();">Pedidos</a>
+    <form id="orders-form" action="{{  url('order') }}" method="GET" class="d-none">
+        @csrf
+    </form>
     <div id="userheaderadmin">
         <div id="imagenheader">
             <img class="iconoheader" src="{{ asset('photos/USUARIO.png') }}"/>
@@ -23,8 +27,13 @@
         <div id="nameheader">
             Sergio Márquez
         </div>
-        <a id="enlaceexit" href="#">
+        <a class="dropdown-item" id="enlaceexit" href="{{ route('logout') }}" 
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
             <img id="iconoexit" src="{{ asset('photos/EXIT.png') }}"/>
         </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
     </div>
 </header>

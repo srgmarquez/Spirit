@@ -25,4 +25,103 @@ h1{
     width:90%;
     float:left;
     border-bottom: 2px solid grey;
+    font-weight: 200;
+}
+
+#agruparformulario{
+    width:60%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    float:left;
+    border-radius: 5px;
+    border-color: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.6);
+    color:white;
+}
+
+.apartado{
+    padding-bottom:2%;
+    width:100%;
+    float:left;
+    padding-top: 2%;
+}
+
+label{
+    width:50%;
+    float:left;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.texto{
+    font-family: 'Times New Roman', Times, serif;
+    width:30%;
+}
+
+#imgtarjetas{
+    width:30%;
+    float:left;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+#textotarjetas{
+    width:100%;
+    text-align: center;
+    float:left;
+}
+
+#confirm{
+    border:3px solid black;
+    margin-bottom: 4%;
+    margin-left:42%;
+    font-size: 120%;
+    padding:1%;
+    background-color: black;
+    color:white;
+    font-family: 'Times New Roman';
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 6%;
+    padding-right: 6%;
+    -webkit-transition: text-shadow 0.5s linear;
+    transition: text-shadow 0.5s linear;
+}
+
+#confirm:hover{
+    text-shadow: 0 0 10px #fff;
+}
+
+#tituloerrores{
+    background-color: lightcoral;
+    margin-left: 5%;
+    width:90%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    float:left;
+}
+
+#mensaje{
+    float:left;
+    width:100%;
+}
+
+#errores{
+    color:red;
+    margin-left: 5%;
+}
+
+#titulomensaje{
+    background-color: lightcoral;
+    margin-left: 5%;
+    width:90%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    float:left;
 }

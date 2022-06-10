@@ -11,6 +11,9 @@
         @csrf
             <p id="titleadmin">Spirit</p>
             <p id="titlewelcomeadmin">¡Bienvenid@ administrador!</p>
+            @if (Session::has('mensaje'))
+                <p id="titulomensaje">{{Session::get('mensaje')}}</p>
+            @endif
             <div id="camponombrelogin">
                 <div id="icononombrelogin">
                 </div>

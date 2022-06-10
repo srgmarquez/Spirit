@@ -16,5 +16,15 @@
         <div id="cabecerasection">
             <h1>Listado pedidos</h1>
         </div>
+        <table id="tablaPedidos">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>Precio total</th>
+                    <th>Prendas</th>
+                    <th>Fecha pedido</th>
+                </tr>
+            </thead>
+        </table>
     </div>
 </body>

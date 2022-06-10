@@ -21,6 +21,7 @@ return new class extends Migration
             $table->unsignedbigInteger('user_id')->unsigned();
             $table->double('total_price');
             $table->string('garments');
+            $table->string('date');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete("cascade");
         });
