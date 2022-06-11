@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <!-- Título de la página -->
+    <title>SPIRIT-EDITCATEGOIA</title>
+    <!-- Cabecera y hoja de estilos asociada -->
     @extends('parts.header_admin')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Category/create-category.css') }}"/> 
 </head>
+<!-- Imagen de fondo -->
 <body style="background-image: url('{{ asset('photos/IMAGEN_ADMIN_FONDO.jpg')}}');">
+    <!-- Menú d enavegación de miga de pan-->
     <nav>   
         <ul>
             <li><a href="{{url('index-admin')}}">Home Admin</a></li>
@@ -14,8 +19,11 @@
             <li><a href="#">Edición categoría</a></li>
         </ul>
     </nav>
+    <!-- Apartado de edición de prendas -->
     <section id="agrupar">
+        <!-- Título -->
         <h1>Edición categoría: {{$category->category_name}}</h1>
+        <!-- Formulario de edición -->
         <form method="post" action="{{ url('/category/' . $category->id) }}" id="formulario_crear" enctype="multipart/form-data">
         @csrf
         {{ method_field('PATCH') }}
@@ -45,5 +53,6 @@
         </div>
     </section>
 </body>
+<!-- Footer -->
 @extends('parts.footer')
 

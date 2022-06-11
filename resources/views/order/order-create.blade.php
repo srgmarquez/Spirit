@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Título de la página -->
     <title>SPIRIT-CARRITO(COMPRA)</title>
+    <!-- Cabecera y hoja de estilos asociada -->
     @extends('parts.header_user')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Order/create-order.css') }}"/>  
 </head>
 <body>
+     <!-- Menú d enavegación para volver al listado del carrito-->
     <nav>   
         <ul>
             <li><a href="{{url('shoping')}}">Volver al listado del carrito</a></li>
         </ul>
     </nav>
-    <div id="agrupar">
+    <!-- seccion de pago -->
+    <section id="agrupar">
+        <!-- Titulo -->
         <div id="cabecera">
             <h1>Introducción de datos bancarios</h1>
         </div>
+        <!-- Mensajes de error en el formulario -->
         @if (count($errors)>0)
+            <!-- Titulo del error-->
             <p id="tituloerrores">Hay errores en el formulario</p>
+            <!-- Errores -->
             <div id="mensaje" role="alert">
                 <ul>
                     @foreach($errors->all() as $error)
@@ -25,9 +33,11 @@
                 </ul>
             </div>
         @endif
+        <!-- Si el usuario que ha introducido no se encuentra en la base de datos -->
         @if ($mensaje == "si")
             <p id="titulomensaje">Usuario introducido: inválido</p>
         @endif
+        <!-- Formulario para introducir los datos de pago -->
         <form method="post" action="{{ url('/order') }}">
         @csrf
             <div id="agruparformulario">
@@ -75,6 +85,7 @@
                 <button type="submit"  id="confirm">Confirmar</button>         
             </div>
         </form>
-    </div>
+    </section>
 </body>
+<!-- Footer -->
 @extends('parts.footer')

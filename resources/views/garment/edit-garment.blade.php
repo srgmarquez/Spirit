@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Título de la página -->
+    <title>SPIRIT-EDITPRENDA</title>
+    <!-- Cabecera y hoja de estilos asociada -->
     @extends('parts.header_admin')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Garment/create-garment.css') }}"/> 
 </head>
+<!-- Imagen de fondo -->
 <body style="background-image: url('{{ asset('photos/IMAGEN_ADMIN_FONDO.jpg')}}');">
+    <!-- Menú d enavegación de miga de pan-->
     <nav>   
         <ul>
             <li><a href="{{url('index-admin')}}">Home Admin</a></li>
@@ -14,8 +19,11 @@
             <li><a href="#">Edición prenda</a></li>
         </ul>
     </nav>
+     <!-- Apartado de edición de prendas -->
     <section id="agrupar">
+        <!-- Título -->
         <h1>Edición prenda: {{$garment->garment_name}}</h1>
+        <!-- Formulario de edición -->
         <form method="post" action="{{ url('/garment/' . $garment->id) }}" id="formulario_crear" enctype="multipart/form-data">
         @csrf
         {{ method_field('PATCH') }}
@@ -63,4 +71,5 @@
         </div>
     </section>
 </body>
+<!-- Footer -->
 @extends('parts.footer')

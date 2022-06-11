@@ -1,8 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <!-- Título de la página -->
     <title>SPIRIT-REGISTER</title>
+    <!-- Hoja de estilos asociada -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/User/user-register.css') }}"/> 
 </head>
 <body>
+    <!-- Cabecera que contiene un slider de fotos -->
     <header>
         <div id="agrupar_imagenes_login">
             <div id="portada_imagenes">
@@ -15,16 +20,21 @@
             </div>
         </div>
     </header>    
-    <div id="agrupar_login">
+    <!-- Apartado registro -->
+    <section id="agrupar_login">
+        <!-- Apartado de titulo y slogan -->
         <div id="tituloPrinci">
             <h1 id="nombre">SPIRIT</h1>
             <h1 id="slogan">Dress for Success</h1>
         </div>
+        <!-- Formulario de registro -->
         <form method="POST" action="{{ route('register') }}" id="formularioregistro">
             @csrf
+            <!-- Titulo del formulario-->
             <div id="registro">
                 Registro
             </div>
+            <!-- Campos para rellenar en el registro -->
             <div class="campo">         
                 <div class="icono">
                 </div>
@@ -66,6 +76,6 @@
                 <a href="{{ route('login') }}" id="anclavolverlogin">Volver</a>
             </div>      
         </form> 
-    </div>
+    </section>
 </body>
 

@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Título de la página -->
+    <title>SPIRIT-CREARPRENDA</title>
+    <!-- Cabecera y hoja de estilos asociada -->
     @extends('parts.header_admin')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Garment/create-garment.css') }}"/> 
 </head>
+<!-- Imagen de fondo -->
 <body style="background-image: url('{{ asset('photos/IMAGEN_ADMIN_FONDO.jpg')}}');">
+    <!-- Menú d enavegación de miga de pan-->
     <nav>   
         <ul>
             <li><a href="{{url('index-admin')}}">Home Admin</a></li>
@@ -14,10 +19,15 @@
             <li><a href="#">Nueva prenda</a></li>
         </ul>
     </nav>
+     <!-- Apartado de creación de prendas -->
     <section id="agrupar">
+        <!-- Título -->
         <h1>Crear nueva prenda</h1>
+        <!-- Si hay errores a la hora de rellenar el formulario, los mostrará -->
         @if (count($errors)>0)
+            <!-- Mensaje por defecto-->
             <p id="tituloerrores">Hay errores en el formulario</p>
+            <!-- Listado de errores -->
             <div id="mensaje" role="alert">
                 <ul>
                     @foreach($errors->all() as $error)
@@ -26,6 +36,7 @@
                 </ul>
             </div>
         @endif
+        <!-- Formulario de creación de una prenda -->
         <form method="post" action="{{ url('/garment') }}" id="formulario_crear" enctype="multipart/form-data">
         @csrf
             <div class="apartado">
@@ -38,6 +49,7 @@
                 <div class="apartar_label">
                     <label>Categoria:</label>
                 </div>
+                <!-- Listado de categorías para elegir a la que pertenecerá esa prenda -->
                 <select name="category_id" class="campo">
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->category_name}}</option>
@@ -75,4 +87,5 @@
         </div>
     </section>
 </body>
+<!-- Footer -->
 @extends('parts.footer')

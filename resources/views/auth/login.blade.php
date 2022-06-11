@@ -1,8 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <!-- Título de la página -->
     <title>SPIRIT</title>
+    <!-- Hoja de estilos asociada -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/User/user-login.css') }}"/> 
 </head>
 <body>
+    <!-- Cabecera que contiene un slider de fotos -->
     <header>
         <div id="agrupar_imagenes_login">
             <div id="portada_imagenes">
@@ -15,16 +20,21 @@
             </div>
         </div>
     </header>
-    <div id="agrupar_login">
+    <!-- Apartado loggin -->
+    <section id="agrupar_login">
+        <!-- Apartado de titulo y slogan -->
         <div id="tituloPrinci">
             <h1 id="nombre">SPIRIT</h1>
             <h1 id="slogan">Dress for Success</h1>
         </div>
+        <!-- Formulario de registro -->
         <form method="POST" action="{{ route('login') }}" id="formulariologin">
             @csrf
+            <!-- Titulo del formulario -->
             <div id="inicio">
                 Inicio
             </div>
+            <!-- Campos para rellenar en el loggin -->
             <div id="camponombrelogin">
                 <div id="icononombrelogin">
                     <img class="icono" src="{{ asset('photos/ICONO-EMAIL.png') }}">
@@ -52,12 +62,14 @@
                 <label id="recordatorio">Recuérdame</label>
                 <figcaption>Guardar usuario y contraseña</figcaption>
             </div>
+            <!-- Boton para entrar en la apliación -->
             <button type="submit"   id="botonlogin"/>Entrar</button>
+            <!-- Apartado para ir a la vista de registro -->
             <div id="apartadocrearlogin">
                 <p id="textocrearlogin">¿Todavía no tienes una cuenta?</p>
                 <a href="{{ route('register') }}" id="anclacrearlogin">Incribirse</a>
             </div>           
         </form>
-    </div>
+    </section>
 </body>
 
