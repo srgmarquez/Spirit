@@ -33,6 +33,6 @@ Route::resource('category', CategoryController::class)->middleware('auth');
 Route::resource('garment', GarmentController::class)->middleware('auth');
 Route::resource('admin', AdminController::class);
 Route::resource('/', HomeController::class);
-Route::resource('user', UserController::class)->middleware('auth');
+Route::resource('user', UserController::class);
 Auth::routes();
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

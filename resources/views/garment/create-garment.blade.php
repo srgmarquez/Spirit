@@ -37,7 +37,7 @@
             </div>
         @endif
         <!-- Formulario de creación de una prenda -->
-        <form method="post" action="{{ url('/garment') }}" id="formulario_crear" enctype="multipart/form-data">
+        <form method="post" action="{{ url('/garment') }}" id="formulario_crear" enctype="multipart/form-data"> 
         @csrf
             <div class="apartado">
                 <div class="apartar_label">

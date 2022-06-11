@@ -40,9 +40,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store($id)
+    public function store(Request $request)
     {
         session_start();
+        echo "hola";
     }
 
     /**
