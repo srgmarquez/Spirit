@@ -35,9 +35,9 @@
         @endphp
         <!-- Se recorren todas las pendas compradas -->
         @foreach($prendas as $prenda)
-            @php
-                <!-- Se añaden esas prendas al array de prendas para posteriormente oder guardar ese array en una sesión 
+            <!-- Se añaden esas prendas al array de prendas para posteriormente oder guardar ese array en una sesión 
                  ( Se utilizará para poder introducirlo en la bas e de datos )-->
+            @php
                 array_push($array_prendas, $prenda->garment_name);
                 $_SESSION['nombre_prendas'] = $array_prendas;
             @endphp

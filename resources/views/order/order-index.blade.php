@@ -25,15 +25,14 @@
         </div>
         <!-- Tabla que contiene información de los pedidos-->
         <table id="tablaPedidos">
-            <th>
-                <!-- Cabecera -->
-                <tr>
-                    <th>Usuario</th>
-                    <th>Precio total</th>
-                    <th>Prendas</th>
-                    <th>Fecha pedido</th>
-                </tr>
-            </th>
+            <!-- Cabecera -->
+            <tr>
+                <th>Usuario</th>
+                <th>Precio total</th>
+                <th>Prendas</th>
+                <th>Fecha pedido</th>
+            </tr>
+            
             <tbody>
                 <!-- Cuerpo de la tabla-->
                 <!-- Se declará una variable contador -->
@@ -46,14 +45,14 @@
                     <!-- Aquí se realiza una consulta para obtener el nombre del usuario que ha hecho ese pedido-->
                     @php
                         $user_name = DB::select('SELECT name FROM users WHERE id = ?', [$order->user_id]);
-                        <!-- La consulta devuelve un array json de valores por lo que hay que recorrerlo-->
+                        // La consulta devuelve un array json de valores por lo que hay que recorrerlo
                         foreach ($user_name as $value) {
-                            <!-- Se guarda en un array normal el valor del campo nombre-->
+                            // Se guarda en un array normal el valor del campo nombre
                             $array[] = $value->name;
                         }
-                        <!-- Como por cada pedido se irá añadiendo un nombre, utilizamos la variable contador para obtener el nombre de esa posición -->
+                        // Como por cada pedido se irá añadiendo un nombre, utilizamos la variable contador para obtener el nombre de esa posición 
                         $name = $array[$contador];
-                        <!-- Sumamos uno al contador para luego utilizar el siguiente nombre-->
+                        // Sumamos uno al contador para luego utilizar el siguiente nombre
                         $contador++;
                     @endphp
                     <!-- Usamos el campo nombre recogido del array-->

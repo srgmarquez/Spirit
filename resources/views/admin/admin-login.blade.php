@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Título de la página -->
     <title>SPIRIT-ADMIN</title>
+    <!-- Hoja de estilos asociada -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Admin/admin-login.css') }}"/>
 </head>
 <body>
-    <div id="loginadmin">
+    <!-- Apartado loggin -->
+    <section id="loginadmin">
+        <!-- Formualrio de registro -->
         <form id="formulariologinadmin" method="post" action="{{ url('/admin') }}">
         @csrf
             <p id="titleadmin">Spirit</p>
@@ -24,7 +27,8 @@
                 </div>
                 <input type="password" id="passlogin" name="adminUserPassword" placeholder="contraseña">
             </div>
+            <!-- Botón para pode rentrar en la aplicación -->
             <button id="botonlogin" type="submit">Entrar</button>
         </form>
-    </div>
+    </section>
 </body>

@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Título de la página -->
+    <title>SPIRIT-HOMEADMIN</title>
+    <!-- Cabecera y hoja de estilos asociada -->
     @extends('parts.header_admin')
     <link rel="stylesheet" type="text/css" href="{{ asset('css/Admin/admin-index.css') }}"/>  
 </head>
 <body>
+    <!-- Menú de navegación de miga de pan-->
     <nav>
         <ol>
             <li><a href="#">Home Admin</a></li>
         </ol>
     </nav>
+    <!-- Apartado de ver las secciones del administrador -->
     <section id="agrupar">
+        <!-- Ambas tiene un titulo y una imagen que al hacer click sobre ella se active un formulario que te
+        diriga al index de esa seccion-->
         <h2>Secciones</h2>
         <div id="agrupar_prendas">
             <h4>Prendas</h4>
@@ -47,5 +54,6 @@
         </div>       
     </section>
 </body>
+<!-- Footer -->
 @extends('parts.footer')
 

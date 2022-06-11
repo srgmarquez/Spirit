@@ -17,8 +17,10 @@ class UserController extends Controller
      */
     public function index()
     {
+        //Se inician las sesiones y se obienen todas las categorías 
         session_start();
         $dates['categories'] = Category::paginate();
+        //Se redirige a la siguiente vista con los datos de las categorías 
         return view('user.user-list-categories', $dates); 
     }
 
@@ -51,20 +53,16 @@ class UserController extends Controller
      */
     public function show($id)
     {
+        //Se inician las sesiones y se obienen tla categoría con el id que viene del método 
         session_start();
         $category = Category::findOrFail($id);
+        // Se realiza una consulta en la cual se obtienes las prendas que las cuales el id de su categoría se igual al id de una de las categorías
         $garments['garments'] = DB::table('categories')
                          ->join('garments', 'garments.category_id', '=', 'categories.id')
                          ->where('categories.id', $category->id)
                          ->paginate(5);
-        
+        // Se devuelve a la siguiente vista , con la categoria y el listado de prendas
         return view('user.user-show-garments', compact('category'), $garments);
-
-
-        /*if (Category::findOrFail($id)) {
-            $garments = Garment::where('category_id', 'LIKE', $id)->get();
-        }
-        return view('user.user-show-garments', 'garments', compact('category'));*/
     }
 
     /**

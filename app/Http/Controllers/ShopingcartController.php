@@ -14,9 +14,13 @@ class ShopingcartController extends Controller
      */
     public function index()
     {
+        //Se iniciar las sessiones
         session_start();
+        // Se guarda en una variable los datos de la sesion de prendas
         $prendas = $_SESSION['prendas'];
+        // Se inicializa una variable mensaje
         $mensaje = "";
+        // Se devuelve  a la siguiente vista con el mensaje y las prendas
         return view('shopingcart.index-shoping', compact('prendas', 'mensaje'));
     }
 
@@ -72,11 +76,17 @@ class ShopingcartController extends Controller
      */
     public function update($id)
     {
+        //Se iniciar las sesiones
         session_start();
+        // Se guarda en una variable los datos de la sesion de prendas
         $prendas = $_SESSION['prendas'];
+        // Se obtiene una prenda, buscadola por el id
         $garment = Garment::findOrFail($id);
+        // Se añade esa prenda al array de prendas
         array_push($prendas, $garment);
+        // Se actualiza la sesión
         $_SESSION['prendas'] = $prendas;
+        // Se devuelve a la vista con un mensaje
         return redirect('user')->with('mensaje', 'Prenda ' . $garment->garment_name . ' añadida al carrito');    
     }
 
@@ -88,17 +98,28 @@ class ShopingcartController extends Controller
      */
     public function destroy($id)
     {
+        //Se iniciar las sesiones
         session_start();
+        // Se obtiene una prenda, buscadola por el id
         $garment = Garment::findOrFail($id);
+        // Se obtiene el array de prendas de la sesion de prendas
         $prendas = $_SESSION['prendas'];
+        // Se recorre el array 
         foreach($prendas as $prenda){
+            // Si el id de la prenda de la posición es igual que el id de la prenda que hemos obtenido por el id 
+            // nos llega del método
             if($prenda->id == $garment->id) {
+                //Eliminamos esa prenda del array de prendas
                 $prendas = array_diff($prendas, array($prenda));
             }
         }
+        // Se actualiza la sesión
         $_SESSION['prendas'] = $prendas;
+        // Se obtiene el nuevo array
         $prendas = $_SESSION['prendas'];
+        // Se inicializa la variable mensaje
         $mensaje = "";
+        // Se devuelve a la vista con un mensaje y el nuevo array de prendas
         return view('shopingcart.index-shoping', compact('prendas', 'mensaje'));
     }
 }

@@ -23,9 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        //Se inician las sesiones
         session_start();
+        //Se crea un array de prendas
         $prendas = []; 
+        // Y se introduce en una sesión
         $_SESSION['prendas'] = $prendas;
+        //Posteriormente se mostrará la vista home
         return view('home');
     }
 }

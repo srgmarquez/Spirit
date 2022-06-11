@@ -54,16 +54,16 @@
                     <td>{{ $garment->description }}</td>
 
                     @php
-                        <!-- Aquí se realiza una consulta para obtener el nombre de la categoria de esa prenda -->
+                        //Aquí se realiza una consulta para obtener el nombre de la categoria de esa prenda 
                         $category_name = DB::select('SELECT category_name FROM categories WHERE id = ?', [$garment->category_id]);
-                        <!-- La consulta devuelve un array json de valores por lo que hay que recorrerlo-->
+                        // La consulta devuelve un array json de valores por lo que hay que recorrerlo
                         foreach ($category_name as $value) {
-                            <!-- Se guarda en un array normal el valor del campo nombre-->
+                            // Se guarda en un array normal el valor del campo nombre
                             $array[] = $value->category_name;
                         }
-                        <!-- Como por cada prenda se irá añadiendo un nombre, utilizamos la variable contador para obtener el nombre de esa posición -->
+                        //Como por cada prenda se irá añadiendo un nombre, utilizamos la variable contador para obtener el nombre de esa posición
                         $name = $array[$contador];
-                        <!-- Sumamos uno al contador para luego utilizar el siguiente nombre-->
+                       //Sumamos uno al contador para luego utilizar el siguiente nombre
                         $contador++;
                     @endphp
                     <!-- Mostramos el nombre de la categoría -->
