@@ -19,9 +19,14 @@ use App\Http\Controllers\OrderController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+/* Ruta par acceder a un método especifico */
 Route::get('index-admin', function () {
     return view('admin/admin-index');
 });
+
+/* Rutas de todos los controladores, resource para indicar todos los métodos por defecto (index, store create...)*/
+/* El middleware auth sirve para que si no están loggeados no puedan acceder a ese método  */
 Route::resource('order', OrderController::class)->middleware('auth');
 Route::resource('shoping', ShopingcartController::class)->middleware('auth');
 Route::resource('category', CategoryController::class)->middleware('auth');

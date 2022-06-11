@@ -1,13 +1,19 @@
+<!-- Link a la hoja de estilos asociada -->
 <link rel="stylesheet" type="text/css" href="{{ asset('css/Parts/header_user.css') }}"/>
 <header>
+    <!-- Parte del logo -->
     <div id="logospirit">
         SPIRIT
     </div>
+    <!-- Parte del usuario -->
     <div id="userheaderadmin">
+        <!-- Parte de la imagen del carrito -->
         <div id="imagenheader">
+            <!-- Al hacer click sobre el carrito te llevará a la página del carrito donde podrás ver las prendas compradas -->
             <a class="dropdown-item" id="enlacecarrito" href="#" 
                 onclick="event.preventDefault();
                 document.getElementById('carrito-form').submit();">
+                <!-- Se contarán las prendas que hay compradas, si hay como mínimo una el carrito tendrá un borde rojo sino, lo tendrá blanco -->
                 @php 
                     $prendas = $_SESSION['prendas'];
                     $numero_prendas = count($prendas);
@@ -22,9 +28,11 @@
                 </form>
             </a>
         </div>
+        <!-- Luego se muestra el nombre del usuario loggeado -->
         <div id="nameheader">
             {{ Auth::user()->name }}
         </div>
+        <!-- Y por último el icono para podes desloggearte, haciendo clic sobre él-->
         <div id="contenedorenlace">
              <a class="dropdown-item" id="enlaceexit" href="{{ route('logout') }}" 
                 onclick="event.preventDefault();
